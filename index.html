@@ -1,0 +1,112 @@
+<!doctype html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./css/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+</head>
+<body class="bg-slate-100 transition duration-300 text-slate-600 pb-20">
+  <button id="btnMode" class="absolute hover:text-red-800 z-10 p-5 top-0 text-red-500 text-2xl right-0 fas fa-sun"></button>
+  <nav class="text-white z-20 text-lg border-t border-red-700">
+    <a href="#home" class="fas fa-home"></a>
+    <ul>
+      <li><a href="#about" class="fas fa-user"></a></li>
+      <li><a href="#project" class="fas fa-laptop-code"></a></li>
+      <li><a href="#contact" class="fas fa-phone"></a></li>
+    </ul>
+  </nav>
+  <section id="home" class="flex flex-col h-[100svh] relative items-center justify-center gap-20 -mt-12">
+    <img src="img/bg.png" id="profile" alt="profile.png" class="w-[600px]">
+    
+    <div class="w-full">
+      <img id="svg1" src="css/Wavee.svg" alt="" class="absolute bottom-[24rem] -z-10 right-5 w-[9rem] dots">
+      <img id="svg2" src="css/dots.svg" alt="" class="absolute top-[12em] w-[9rem] dots">
+      
+      <span class="font-bold text-sm">Hi selamat datang, nama saya</span>
+      <h1 class="text-5xl font-semibold text-red-500">Alif rahman</h1>
+      <span class="block font-medium mb-5">Saya seorang kariawan dan Web developer</span>
+      <a href="#contact" class="px-5 shadow-md py-3 rounded-full bg-red-500 text-white hover:bg-red-600">Hubungi saya</a>
+    </div>
+  </section>
+  
+  <section id="about" class="flex-col">
+    <h1 class="text-2xl block w-full text-red-500 font-semibold mb-4">Tentang saya</h1>
+    <div class="flex flex-col gap-5">
+      <p>Nama saya <b class="text-red-500 font-semibold">Alif Rahman</b>. Di samping bekerja di pabrik, saya juga merintis jalan di dunia pembuatan website. Meski masih belajar, saya percaya setiap langkah akan membawa hasil di waktu yang tepat.</p>
+      
+      <span>
+        <p class="text-xl">Mari berteman</p>
+        Yuk, follow untuk mengenal saya lebih dekat! Temukan saya di berbagai platform sosial media pilihan Anda, dan ikuti perjalanan saya di dunia digital.
+        
+        <div id="social" class="mt-2 flex gap-5">
+          <a href="" class="fa-brands fa-facebook text-blue-400 hover:text-blue-600 active:text-blue-600"></a>
+          <a href="" class="fa-brands fa-instagram text-rose-400  hover:text-rose-600 active:text-rose-600"></a>
+          <a href="" class="fa-brands fa-tiktok text-stone-400 hover:text-stone-600 active:text-stone-600"></a>
+          <a href="" class="fa-brands fa-twitter text-cyan-400 hover:text-cyan-600 active:text-cyan-600"></a>
+        </div>
+      </span>
+    </div>
+  </section>
+  <section id="project">
+    <h1 class="text-2xl w-full text-red-500 font-semibold mb-4">Portofolio</h1>
+    <p class="mb-3">Beberapa project yang pernah saya buat.</p>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Item slider disini -->
+        <div class="swiper-slide border rounded-lg shadow overflow-hidden relative group">
+          <img src="img/porto1.jpg" alt="" >
+          <div class="absolute top-full transition-all duration-300 group-hover:top-0 flex w-full justify-center flex-col items-center bg-none group-hover:bg-red-500/90 h-full text-white">
+            <h1 class="font-semibold mb-2 text-lg">Website portofolio</h1>
+            <p>Website sederhana yang saya buat dengan tailwindcss.</p>
+            <a href="" class="mt-5 hover:text-red-500 hover:bg-white hover:shadow-md rounded-full p-2 px-3 border border-white"><i class="fa fa-arrow-right"></i> Kunjungi</a>
+          </div>
+        </div>
+      </div>
+      <!-- Tambahkan pagination, navigation, dll jika diperlukan -->
+      <div class="swiper-pagination"></div>
+    </div>
+    
+  </section>
+  <section id="contact" class="bg-slate-50">
+    <h1 class="text-2xl block w-full text-red-500 font-semibold mb-4">Kontak saya</h1>
+    <span>Kamu bisa menghubungi saya lewat kontak dibawah ini:</span>
+    <div class="mt-5 flex flex-col gap-5">
+      <a href="mailto:aliefanarkis@gmail.com" class="flex items-center gap-3">
+        <i class="far fa-envelope text-3xl text-red-500"></i>
+        <p class="inline-block">E-mail</p>
+      </a>
+      <a href="https://wa.me/6282241395522" class="flex items-center gap-3">
+        <i class="fab fa-whatsapp text-3xl text-green-700"></i>
+        <p class="inline-block">WhatsApp</p>
+      </a>
+    </div>
+  </section>
+  <script src="./js/script.mjs"></script>
+  <script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+  const swiper = new Swiper('.swiper', {
+  // Optional parameters
+    loop: true,
+    
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+    // And if we need scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+    });
+</script>
+</body>
+</html>

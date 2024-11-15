@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav{
+  @apply fixed bottom-0 w-full bg-red-500 flex justify-between px-7 items-center h-[80px];
+  a{
+    @apply hover:bg-red-200 hover:text-red-500 p-3 rounded-xl
+  }
+  ul{
+    @apply flex gap-5;
+  }
+}
+
+section{
+  @apply p-7
+}
+
+#about{
+  @apply bg-slate-50
+}
+
+#social{
+  a{
+    @apply text-2xl
+  }
+}
+
+.dark{
+  @apply bg-stone-800 text-slate-100;
+  nav a{
+    @apply text-slate-800
+  }
+  #about, #contact{
+    @apply bg-stone-600 text-slate-100;
+    a i{
+      @apply text-slate-100
+    }
+  }
+}
+
+#svg1{
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
+#svg2{
+  animation: parallax2 linear;
+  animation-timeline: scroll();
+}
+
+@keyframes parallax{
+  to{
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes parallax2{
+  to{
+    transform: translateY(300px);
+  }
+}
+
+/* Swiper */
+.swiper-slide{
+  height: 300px !important;
+  background-color: red;
+}
